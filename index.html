@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="E-commerce website" />
+    <!-- ====== Favicon ====== -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <!-- ====== Boxicons ====== -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ECO | Home</title>
+  </head>
+  <body>
+    <div class="loading-circle"><span></span></div>
+
+    <div class="be-a-member hidden">
+      <section class="sign-up card-face">
+        <div class="info">
+          <div class="switch">
+            <p class="txt-3">Have an account?</p>
+            <button class="transparent-btn switch-between txt-3">login</button>
+          </div>
+          <form class="form">
+            <h2>Hello!</h2>
+            <p>It's good to have you</p>
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Confirm password"
+            />
+            <button class="btn submit-btn">sign up</button>
+            <div class="third-party-login">
+              <p>or continue with</p>
+              <div class="icons">
+                <i class="bx bxl-google icon google"></i>
+                <i class="bx bxl-facebook-circle icon facebook"></i>
+                <i class="bx bxl-github icon"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="image image-2">
+          <img src="./images/signup.png" alt="" />
+        </div>
+        <i class="bx bx-x close-icon"></i>
+      </section>
+      <section class="log-in card-face active">
+        <div class="image image-1">
+          <img src="./images/login.png" alt="" />
+        </div>
+        <div class="info">
+          <div class="switch">
+            <p class="txt-3">Not a member?</p>
+            <button class="transparent-btn switch-between txt-3">
+              register now
+            </button>
+          </div>
+          <form class="form">
+            <h2>Hello again!</h2>
+            <p class="txt-3">Welcome back, you've been missed.</p>
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Password" />
+            <button type="button" class="transparent-btn forget-btn">
+              forget password?
+            </button>
+            <button class="btn submit-btn">login</button>
+            <div class="third-party-login">
+              <p>or continue with</p>
+              <div class="icons">
+                <i class="bx bxl-google icon google"></i>
+                <i class="bx bxl-facebook-circle icon facebook"></i>
+                <i class="bx bxl-github icon"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+        <i class="bx bx-x close-icon"></i>
+      </section>
+    </div>
+
+    <header class="page-header">
+      <div class="container">
+        <i class="bx bx-menu-alt-right burger" id="burgerIcon"></i>
+        <div class="logo">
+          <a href="#">
+            <img src="./images/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <nav class="nav">
+          <ul class="links">
+            <li><a href="#new">new</a></li>
+            <li><a href="#discount">discount</a></li>
+            <li><a href="#reco">reco</a></li>
+            <li><a href="#features">features</a></li>
+          </ul>
+          <div class="icons">
+            <input type="search" id="searchBar" class="search-bar hidden" />
+            <i
+              class="bx bx-search icon search-icon"
+              id="searchIcon"
+              title="Search"
+            ></i>
+            <i
+              class="bx bx-cart-alt icon cart-icon"
+              title="Cart"
+              id="cartPageIcon"
+            ></i>
+            <i class="bx bx-user icon" title="Profile" id="profileIcon"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="landing">
+      <div class="container">
+        <div class="text">
+          <p class="txt-2">Shop till you drop</p>
+          <h2>Sh<span>o</span>pE<span>a</span>se</h2>
+          <p class="txt-2">it never stops!</p>
+          <a class="special-btn btn" href="#new">explore now!</a>
+        </div>
+        <div class="image">
+          <img src="./images/discount_1.svg" alt="Woman" />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="new gallery-section linked-section produtcs-container"
+      id="new"
+    >
+      <div class="container">
+        <div class="special-heading">
+          <h2>new</h2>
+          <p>Shopping <span>INSIDE</span> our website</p>
+        </div>
+        <div class="products gallery">
+          <div class="box box-0 hidden" data-cat="man" data-id="1">
+            <section class="image">
+              <img src="./images/col-10.webp" alt="product-1" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Nike air men shirt</h3>
+              <div class="rate" data-rate="4.5">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star-half star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">150</span>
+                <button class="add-to-cart transparent-btn" title="Pre-order">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-1 hidden" data-cat="man" data-id="2">
+            <section class="image">
+              <img src="./images/col-12.webp" alt="product-2" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Louis Vuitton men shirt</h3>
+              <div class="rate" data-rate="3.5">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star-half star"></i>
+                <i class="bx bx-star star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">130</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-2 hidden" data-cat="baby" data-id="3">
+            <section class="image">
+              <img src="./images/col-01.webp" alt="product-3" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Gucci girl dress</h3>
+              <div class="rate" data-rate="3.5">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star-half star"></i>
+                <i class="bx bx-star star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">100</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-3 hidden" data-cat="baby" data-id="4">
+            <section class="image">
+              <img src="./images/col-02.webp" alt="product-4" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Zara girl dress</h3>
+              <div class="rate" data-rate="4.0">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bx-star star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">120</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-4 hidden" data-cat="woman" data-id="5">
+            <section class="image">
+              <img src="./images/col-07.webp" alt="product-5" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Calvin Klein woman shoes</h3>
+              <div class="rate" data-rate="3.0">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bx-star star"></i>
+                <i class="bx bx-star star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">90</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-5 hidden" data-cat="woman" data-id="6">
+            <section class="image">
+              <img src="./images/col-08.webp" alt="product-6" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Bernardo woman shoes</h3>
+              <div class="rate" data-rate="4.0">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bx-star star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">80</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-6 hidden" data-cat="man" data-id="7">
+            <section class="image">
+              <img src="./images/col-16.webp" alt="product-7" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Nike shirt - short sleeves</h3>
+              <div class="rate" data-rate="3.5">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star-half star"></i>
+                <i class="bx bx-star star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">160</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-7 hidden" data-cat="man" data-id="8">
+            <section class="image">
+              <img src="./images/col-14.webp" alt="product-8" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Ted Baker men shoes</h3>
+              <div class="rate" data-rate="3.5">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star-half star"></i>
+                <i class="bx bx-star star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">200</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-8 hidden" data-cat="man" data-id="9">
+            <section class="image">
+              <img src="./images/col-13.webp" alt="product-9" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Adidas men shoes</h3>
+              <div class="rate" data-rate="4.0">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star-half star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">90</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-9 hidden" data-cat="baby" data-id="10">
+            <section class="image">
+              <img src="./images/col-03.webp" alt="product-10" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Zara girl dress</h3>
+              <div class="rate" data-rate="3.5">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star-half star"></i>
+                <i class="bx bx-star star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">80</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-10 hidden" data-cat="woman" data-id="11">
+            <section class="image">
+              <img src="./images/col-09.webp" alt="product-11" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Nike woman shoes</h3>
+              <div class="rate" data-rate="4.5">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star-half star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">180</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+          <div class="box box-11 hidden" data-cat="woman" data-id="12">
+            <section class="image">
+              <img src="./images/col-15.webp" alt="product-12" />
+            </section>
+            <section class="info">
+              <h3 class="product-name">Zara woman shoes</h3>
+              <div class="rate" data-rate="3.5">
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star star"></i>
+                <i class="bx bxs-star-half star"></i>
+                <i class="bx bx-star star"></i>
+              </div>
+              <div class="price-add">
+                <span class="price">120</span>
+                <button class="add-to-cart transparent-btn">
+                  <i class="bx bx-cart cart-icon"></i>
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+        <button class="special-btn btn load-more centered">load more</button>
+      </div>
+    </section>
+
+    <section class="discount linked-section" id="discount">
+      <div class="container">
+        <div class="banner txt-1">
+          <div class="info">
+            Up to <span>70% off</span> - T-shirts & Accessories
+          </div>
+          <a class="special-btn btn centered" href="discount.html"
+            >explore more</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="reco linked-section produtcs-container" id="reco">
+      <div class="container">
+        <div class="special-heading">
+          <h2>reco</h2>
+          <p>Products we recommended</p>
+        </div>
+        <h2 class="special-heading"></h2>
+        <div class="filter-btns">
+          <button class="cat-filter btn active">all</button>
+          <button class="cat-filter btn">Kids</button>
+          <button class="cat-filter btn">Men</button>
+          <button class="cat-filter btn">Ladies</button>
+        </div>
+        <div class="boxes-container"></div>
+      </div>
+      <div class="slider-controls">
+        <button class="previous-container" id="previous">
+          <i class="bx bx-left-arrow arrow"></i>
+        </button>
+        <button class="next-container" id="next">
+          <i class="bx bx-right-arrow arrow"></i>
+        </button>
+        <div class="slider-indicators" id="sliderIndicators"></div>
+      </div>
+    </section>
+
+    <section class="features linked-section" id="features">
+      <div class="container">
+        <div class="special-heading">
+          <h2>features</h2>
+        </div>
+        <h2 class="special-heading"></h2>
+        <div class="content">
+          <div class="feat">
+            <i class="bx bxs-check-square icon"></i>
+            <h3 class="txt-2">easy order system</h3>
+            <p>With just a few clicks, you can select your desired products.</p>
+          </div>
+          <div class="feat">
+            <i class="bx bxs-user icon"></i>
+            <h3 class="txt-2">on time delivery</h3>
+            <p>
+              We ensure that your products are delivered to you safely and on
+              time.
+            </p>
+          </div>
+          <div class="feat">
+            <i class="bx bxs-dollar-circle icon"></i>
+            <h3 class="txt-2">money back gaurantee</h3>
+            <p>We offer a money-back guarantee on all of our products.</p>
+          </div>
+          <div class="feat">
+            <i class="bx bx-support icon"></i>
+            <h3 class="txt-2">24/7 customer support</h3>
+            <p>
+              Our team is available around the clock to provide you with the
+              support you need.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <img src="./images/logo.svg" alt="Logo" class="logo" />
+        <p class="txt-3 who-we-are">
+          Our website is designed with your convenience in mind, offering you an
+          easy and enjoyable shopping experience. With our intuitive search and
+          navigation tools, you'll be able to find exactly what you're looking
+          for quickly and easily.
+        </p>
+        <div class="social">
+          <a
+            href="https://www.facebook.com/profile.php?id=100085270735685"
+            target="_blank"
+            aria-label="facebook"
+          >
+            <i class="bx bxl-facebook icon"></i>
+          </a>
+          <a
+            href="https://twitter.com/Ayuob_Al3raqi"
+            target="_blank"
+            aria-label="twitter"
+          >
+            <i class="bx bxl-twitter icon"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/dev_ayb/"
+            target="_blank"
+            aria-label="instagram"
+          >
+            <i class="bx bxl-instagram icon"></i>
+          </a>
+          <a
+            href="mailTo:admin@dev-ayoub.com"
+            target="_blank"
+            aria-label="email"
+          >
+            <i class="bx bx-envelope icon"></i>
+          </a>
+        </div>
+        <p class="copyright txt-2">
+          All rights reserved for <span>Ayoub Jasim</span>
+        </p>
+      </div>
+    </footer>
+
+    <span class="scroll-to-top">
+      <i class="bx bx-up-arrow-alt"></i>
+    </span>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/galary.js"></script>
+    <script src="./js/imageSlider.js"></script>
+  </body>
+</html>

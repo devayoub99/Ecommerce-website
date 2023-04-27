@@ -1,0 +1,49 @@
+@use "../util/" as u;
+
+.footer {
+  background-image: var(--primary-gradient);
+  padding-top: u.rem(20);
+  padding-bottom: u.rem(20);
+
+  .container {
+    @include u.d-flex(space-between, flex-start);
+    gap: u.rem(15) u.rem(30);
+    flex-direction: column;
+  }
+
+  .logo {
+    width: u.rem(120);
+  }
+
+  .who-we-are {
+    line-height: 1.5;
+    @include u.breakpoint(medium) {
+      width: 75%;
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: u.rem(6);
+
+    .icon {
+      font-size: u.rem(28);
+      cursor: pointer;
+      transition: var(--short-duration);
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .copyright {
+    width: fit-content;
+    margin: 0 auto;
+
+    span {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+  }
+}

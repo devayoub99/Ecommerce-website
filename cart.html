@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECO | Cart</title>
+    <meta name="description" content="E-commerce website - Cart page" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ====== Boxicons ====== -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/pages/cart.css" />
+  </head>
+  <body>
+    <div class="loading-circle"><span></span></div>
+
+    <div class="be-a-member hidden">
+      <section class="sign-up card-face">
+        <div class="info">
+          <div class="switch">
+            <p class="txt-3">Have an account?</p>
+            <button class="transparent-btn switch-between txt-3">login</button>
+          </div>
+          <form class="form">
+            <h2>Hello!</h2>
+            <p>It's good to have you</p>
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Confirm password"
+            />
+            <button class="btn submit-btn">sign up</button>
+            <div class="third-party-login">
+              <p>or continue with</p>
+              <div class="icons">
+                <i class="bx bxl-google icon google"></i>
+                <i class="bx bxl-facebook-circle icon facebook"></i>
+                <i class="bx bxl-github icon"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="image image-2">
+          <img src="./images/signup.png" alt="" />
+        </div>
+        <i class="bx bx-x close-icon"></i>
+      </section>
+      <section class="log-in card-face active">
+        <div class="image image-1">
+          <img src="./images/login.png" alt="" />
+        </div>
+        <div class="info">
+          <div class="switch">
+            <p class="txt-3">Not a member?</p>
+            <button class="transparent-btn switch-between txt-3">
+              register now
+            </button>
+          </div>
+          <form class="form">
+            <h2>Hello again!</h2>
+            <p class="txt-3">Welcome back, you've been missed.</p>
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Password" />
+            <button type="button" class="transparent-btn forget-btn">
+              forget password?
+            </button>
+            <button class="btn submit-btn">login</button>
+            <div class="third-party-login">
+              <p>or continue with</p>
+              <div class="icons">
+                <i class="bx bxl-google icon google"></i>
+                <i class="bx bxl-facebook-circle icon facebook"></i>
+                <i class="bx bxl-github icon"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+        <i class="bx bx-x close-icon"></i>
+      </section>
+    </div>
+
+    <header class="page-header">
+      <div class="container">
+        <i class="bx bx-menu-alt-right burger" id="burgerIcon"></i>
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./images/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <nav class="nav">
+          <ul class="links">
+            <li><a href="./index.html#new">new</a></li>
+            <li><a href="./discount.html">discount</a></li>
+            <li><a href="./index.html#reco">reco</a></li>
+            <li><a href="./index.html#features">features</a></li>
+          </ul>
+          <div class="icons">
+            <input type="search" id="searchBar" class="search-bar hidden" />
+            <i
+              class="bx bx-search icon search-icon"
+              id="searchIcon"
+              title="Search"
+            ></i>
+            <i
+              class="bx bxs-cart-alt icon cart-icon"
+              title="Cart"
+              id="cartPageIcon"
+            ></i>
+            <i class="bx bx-user icon" title="Profile" id="profileIcon"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="cart gallery-section produtcs-container">
+      <div class="container">
+        <section class="main">
+          <h2 class="title">your items</h2>
+          <div class="products"></div>
+        </section>
+        <aside class="aside">
+          <h2 class="title">total</h2>
+          <div class="content">
+            <p class="total-price">Subtotal: <span id="subTotal">0</span></p>
+            <p>shipping: <span id="shipping"></span></p>
+            <p>discount: <span id="discount"></span></p>
+            <p>total: <span id="total"></span></p>
+          </div>
+          <div class="content">
+            <p class="discount-code">discount-code</p>
+            <input type="text" name="discountCode" id="discountCode" />
+            <button class="btn special-btn">apply</button>
+            <button class="btn special-btn">pay</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <img src="./images/logo.svg" alt="Logo" class="logo" />
+        <p class="txt-3 who-we-are">
+          Our website is designed with your convenience in mind, offering you an
+          easy and enjoyable shopping experience. With our intuitive search and
+          navigation tools, you'll be able to find exactly what you're looking
+          for quickly and easily.
+        </p>
+        <div class="social">
+          <a
+            href="https://www.facebook.com/profile.php?id=100085270735685"
+            target="_blank"
+            aria-label="facebook"
+          >
+            <i class="bx bxl-facebook icon"></i>
+          </a>
+          <a
+            href="https://twitter.com/Ayuob_Al3raqi"
+            target="_blank"
+            aria-label="twitter"
+          >
+            <i class="bx bxl-twitter icon"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/dev_ayb/"
+            target="_blank"
+            aria-label="instagram"
+          >
+            <i class="bx bxl-instagram icon"></i>
+          </a>
+          <a
+            href="mailTo:admin@dev-ayoub.com"
+            target="_blank"
+            aria-label="email"
+          >
+            <i class="bx bx-envelope icon"></i>
+          </a>
+        </div>
+        <p class="copyright txt-2">
+          All rights reserved for <span>Ayoub Jasim</span>
+        </p>
+      </div>
+    </footer>
+
+    <span class="scroll-to-top">
+      <i class="bx bx-up-arrow-alt"></i>
+    </span>
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+  </body>
+</html>

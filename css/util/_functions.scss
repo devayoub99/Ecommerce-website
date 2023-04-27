@@ -1,0 +1,70 @@
+@use "sass:math";
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return (math.div($pixel, 16) + rem);
+  } @else {
+    @error ("You MUST type just a number here with rem() function.");
+  }
+}
+
+@mixin d-flex($main: flex-start, $cross: stretch) {
+  & {
+    display: flex;
+    @if ($main != flex-start) {
+      justify-content: $main;
+    }
+    @if ($cross != stretch) {
+      align-items: $cross;
+    }
+  }
+}
+
+@mixin transform-center($x, $y: 0) {
+  & {
+    position: absolute;
+    transform: translate(-$x, -$y);
+    @if ($x != 0) {
+      left: $x;
+    }
+    @if ($y != 0) {
+      top: $y;
+    }
+  }
+}
+
+@mixin d-grid($boxes, $rGap, $cGap) {
+  display: grid;
+  gap: rem($rGap) rem($cGap);
+  @if $boxes == 3 {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  } @else if $boxes == 4 {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  } @else if $boxes == 5 {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@mixin radius($value) {
+  & {
+    border-radius: $value + px;
+  }
+}
+
+/// Landscape Mobile(Small Screens) 576px^
+/// Medium Screen                   768px^
+/// Large Screen                    992px^
+/// Xlarge Screen                   1200px^
+
+$breakpoints-up: (
+  "small": 36em,
+  "medium": 48em,
+  "large": 62em,
+  "xlarge": 75em,
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}

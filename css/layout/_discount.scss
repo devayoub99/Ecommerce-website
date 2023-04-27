@@ -1,0 +1,16 @@
+@use "../util/" as u;
+
+.discount {
+  background-image: url(../../images/discount.jpg);
+  color: var(--white-color);
+  text-align: center;
+
+  .special-btn:hover {
+    background-color: var(--white-color);
+  }
+
+  span {
+    color: var(--red-color);
+    font-weight: bold;
+  }
+}

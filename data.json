@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "availability": true,
+      "title": "Nike Air Men shirt",
+      "rate": 4.5,
+      "price": 150,
+      "imgUrl": "./images/col-10.webp",
+      "desc": "Crafted from 100% premium cotton, our shirts are breathable and soft to the touch, ensuring all-day comfort. With a timeless and versatile design, these shirts are perfect for any occasion, from a casual day out to a formal event. Featuring a classic fit and a range of stylish colors, our shirts are sure to make you stand out from the crowd. Easy to care for and maintain, these shirts are machine washable and will maintain their shape and color wash after wash."
+    },
+    {
+      "id": "2",
+      "availability": false,
+      "availabilityTime": "12 August 2023",
+      "price": 200,
+      "title": "ted baker men shoes",
+      "imgUrl": "./images/col-14.webp"
+
+    },
+    {
+      "id": "3",
+      "availability": true,
+      "title": "Louis Vuitton men shirt",
+      "rate": 3.5,
+      "price": 130,
+      "imgUrl": "./images/col-12.webp",
+      "desc": "Crafted from 100% premium cotton, our T-shirts are soft breathable, and perfect for everyday wear. The high-quality fabric ensures that the shirt feels comfortable against your skin, while the classic design makes it a versatile addition to your wardrobe.With a variety of colors and sizes to choose from, you're sure to find the perfect T-shirt to fit your style. And, with a slim fit that hugs your body just right, you'll look and feel your best no matter where you go. These T-shirts are also easy to care for, machine washable and can withstand regular wear and tear without losing their shape or color. Plus, they're affordably priced, making it easy to stock up on your favorite colors and styles."
+    },
+    {
+      "id": "4",
+      "availability": false,
+      "availabilityTime": "15 May 2023",
+      "price": 90,
+      "title": "Calvin Klein woman shoes",
+      "imgUrl": "./images/col-10.webp"
+
+    }
+  ]
+}

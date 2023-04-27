@@ -1,0 +1,13 @@
+@use "../util/" as u;
+
+.new {
+  position: relative;
+
+  .products {
+    @include u.d-grid(4, 30, 30);
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+  }
+}

@@ -1,0 +1,164 @@
+@use "../util" as u;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: hsl(181, 100%, 44%);
+  --primary-color-light: hsl(181, 100%, 95%);
+  --default-color: #202123;
+  --black-color: #000;
+  --white-color: #fff;
+  --gray-color: #c9c9c9;
+  --gray-color-light: #eee;
+  --red-color: #ff1e00;
+  --primary-gradient: linear-gradient(
+    90deg,
+    hsl(180, 79%, 94%),
+    hsl(181, 78%, 82%)
+  );
+  --box-shadow-1: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow-2: 0 5px 15px #8b8b8b;
+  --short-duration: 0.3s;
+  --mid-duration: 0.5s;
+  --long-duration: 0.7s;
+  --top-space: 40px;
+  --top-space-l: 60px;
+  --bottom-space: 40px;
+  --bottom-space-l: 60px;
+  --light-p: #444;
+  --header_high: 68px;
+
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Firefox */
+  scrollbar-color: var(--primary-color) var(--primary-color-light);
+  scrollbar-width: thin;
+  font-size: 16px;
+}
+
+/* CHROME */
+html::-webkit-scrollbar {
+  width: u.rem(10);
+}
+
+html::-webkit-scrollbar-track {
+  background-color: var(--primary-color-light);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background-color: var(--primary-color);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--black-color);
+  background-color: var(--white-color);
+
+  &.member-layout {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body > section {
+  scroll-margin: u.rem(50);
+  padding-top: var(--top-space);
+  padding-bottom: var(--bottom-space);
+
+  @include u.breakpoint(medium) {
+    padding-top: var(--top-space-l);
+    padding-bottom: var(--bottom-space-l);
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: u.rem(15);
+  padding-right: u.rem(15);
+
+  @include u.breakpoint(small) {
+    width: map-get(u.$breakpoints-up, small) - 1em;
+  }
+
+  @include u.breakpoint(medium) {
+    width: map-get(u.$breakpoints-up, medium) - 1.125em;
+  }
+
+  @include u.breakpoint(large) {
+    width: map-get(u.$breakpoints-up, large) - 1.375em;
+  }
+
+  @include u.breakpoint(xlarge) {
+    width: map-get(u.$breakpoints-up, xlarge) - 1.875em;
+  }
+}
+
+// Create Loading Circle
+.loading-circle {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.77);
+  z-index: 4;
+
+  &.hidden {
+    display: none;
+  }
+
+  span {
+    width: u.rem(60);
+    height: u.rem(60);
+    border: u.rem(8) solid #ccc {
+      top-color: var(--primary-color);
+    }
+
+    @include u.transform-center(50%, 50%);
+
+    @include u.radius(30);
+
+    animation: loading 1.5s infinite ease-in-out;
+    @keyframes loading {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  }
+}

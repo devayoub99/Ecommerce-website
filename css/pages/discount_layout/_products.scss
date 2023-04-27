@@ -1,0 +1,41 @@
+@use "../inherited" as u;
+
+.products {
+  margin-bottom: u.rem(20);
+  position: relative;
+
+  .discounted {
+    position: relative;
+
+    &::before {
+      content: "65%";
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: u.rem(16) u.rem(8);
+      // width: u.rem(30);
+      // height: u.rem(60);
+      background-color: var(--red-color);
+      color: var(--white-color);
+      writing-mode: vertical-lr;
+      @include u.d-flex(center, center);
+      font-weight: 500;
+    }
+  }
+
+  .title {
+    width: fit-content;
+    margin: 0 auto u.rem(60);
+    font-size: u.rem(28);
+    padding-bottom: u.rem(8);
+    border-bottom: u.rem(4) solid var(--black-color);
+
+    span {
+      color: var(--red-color);
+    }
+  }
+
+  .container {
+    @include u.d-grid(3, 30, 30);
+  }
+}
