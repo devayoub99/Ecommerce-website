@@ -145,7 +145,7 @@ function removeNotificationDot(targetElement) {
 
 /* ========== [9] Add active class to the Current Section =========== */
 const navLinks = document.querySelectorAll(".page-header nav a");
-const sections = document.querySelectorAll(".linked-section");
+const sections = document.querySelectorAll(".linked-sec");
 
 window.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
