@@ -6,15 +6,17 @@
     @include u.d-grid(4, 30, 30);
 
     .feat {
-      box-shadow: 0 0 20px #ccc;
+      box-shadow: 0 0 20px var(--gray-color);
       padding: u.rem(30) u.rem(15);
       border-radius: u.rem(8);
       text-align: center;
       position: relative;
+      overflow: hidden;
 
       &::before {
         content: "";
-        @include u.transform-center(50%, 50%);
+        @include u.transform-center(0, 50%);
+        left: 0;
         background-color: transparent;
         width: u.rem(0);
         height: u.rem(0);
@@ -43,10 +45,11 @@
       h3 {
         text-transform: capitalize;
         margin: u.rem(20) auto u.rem(10);
+        color: var(--black-color);
       }
 
       p {
-        color: var(--light-p);
+        color: var(--dark-gray-color);
         line-height: 1.5;
       }
     }

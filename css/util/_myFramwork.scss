@@ -14,7 +14,7 @@
   height: 100vh;
   position: relative;
   z-index: 3;
-  background-color: hsl(240, 96%, 90%);
+  background-color: var(--member-color);
   transition: var(--mid-duration);
 
   &.hidden {
@@ -67,11 +67,11 @@
     }
 
     .image-1 {
-      background-color: #e5e5ff;
+      background-color: var(--login-color);
     }
 
     .image-2 {
-      background-color: #ffcce0;
+      background-color: var(--signup-color);
     }
 
     .info {
@@ -112,7 +112,7 @@
       }
 
       input {
-        border: u.rem(1) solid #ccc;
+        border: 1px solid #ccc;
       }
 
       .icons {
@@ -146,29 +146,29 @@
 
   .log-in {
     .submit-btn {
-      background-color: hsl(240, 100%, 95%);
+      background-color: var(--login-color);
     }
     .switch-between:hover {
-      color: hsl(240, 100%, 65%);
+      color: #4d4dff;
     }
 
     input,
     button {
-      outline-color: hsl(240, 96%, 80%);
+      outline-color: #9b9bfd;
     }
   }
 
   .sign-up {
     .submit-btn {
-      background-color: hsl(336, 100%, 90%);
+      background-color: var(--signup-color);
     }
     .switch-between:hover {
-      color: hsl(336, 100%, 60%);
+      color: #ff3385;
     }
 
     input,
     button {
-      outline-color: hsl(336, 100%, 80%);
+      outline-color: #ff99c2;
     }
   }
 }
@@ -195,7 +195,7 @@
   transition: var(--mid-duration);
 
   &:hover {
-    box-shadow: 0 0 20px #ccc;
+    box-shadow: var(--box-shadow-1);
   }
 
   .image {
@@ -216,7 +216,7 @@
       .color {
         width: u.rem(24);
         height: u.rem(24);
-        border: u.rem(1) solid #333;
+        border: u.rem(1) solid var(--black-color);
       }
     }
 
@@ -269,7 +269,7 @@
       width: fit-content;
       margin: u.rem(10) 0;
       background-color: var(--primary-color);
-      color: var(--default-color);
+      color: var(--black-color);
       @include u.radius(8);
       font-size: u.rem(16);
       font-weight: 500;
@@ -386,7 +386,7 @@
   }
 
   p {
-    color: #777;
+    color: var(--dark-gray-color);
   }
 
   span {
@@ -397,7 +397,7 @@
 
 .cart .title {
   width: fit-content;
-  color: var(--light-p);
+  color: var(--dark-gray-color);
   font-size: u.rem(30);
   padding-bottom: u.rem(10);
   margin-bottom: u.rem(20);

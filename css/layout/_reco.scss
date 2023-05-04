@@ -78,7 +78,7 @@
     .box.pop-up-box {
       left: 50%;
       transform: translate(-50%, -50%);
-      box-shadow: 0 0 20px #ccc;
+      box-shadow: var(--box-shadow-1);
 
       @include u.breakpoint(small) {
         width: 62%;
@@ -108,7 +108,7 @@
 
   .slider-controls {
     button {
-      background-color: hsla(0, 0%, 28%, 0.3);
+      background-color: var(--gray-color);
       color: var(--black-color);
       border: none;
       @include u.radius(8);
@@ -120,7 +120,7 @@
       transition: var(--short-duration);
 
       &:hover {
-        background-color: hsla(0, 0%, 28%, 0.15);
+        background-color: var(--light-gray-color);
       }
     }
 
@@ -133,10 +133,6 @@
 
     .disabled {
       pointer-events: none;
-
-      &:hover {
-        background-color: rgba(71, 71, 71, 0.3);
-      }
     }
   }
 }

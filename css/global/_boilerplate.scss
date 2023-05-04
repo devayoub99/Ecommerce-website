@@ -10,36 +10,36 @@
 
 :root {
   --primary-color: hsl(181, 100%, 44%);
-  --primary-color-light: hsl(181, 100%, 95%);
-  --default-color: #202123;
-  --black-color: #000;
+  --black-color: #333;
   --white-color: #fff;
+  --dark-gray-color: #666;
   --gray-color: #c9c9c9;
-  --gray-color-light: #eee;
+  --light-gray-color: #eee;
   --red-color: #ff1e00;
+  --member-color: hsl(240, 96%, 90%);
+  --login-color: hsl(240, 100%, 95%);
+  --signup-color: hsl(336, 100%, 90%);
+  --scroll-bar-bg: hsl(181, 100%, 90%);
   --primary-gradient: linear-gradient(
     90deg,
     hsl(180, 79%, 94%),
     hsl(181, 78%, 82%)
   );
-  --box-shadow-1: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow-1: 0 0 20px #ccc;
   --box-shadow-2: 0 5px 15px #8b8b8b;
   --short-duration: 0.3s;
   --mid-duration: 0.5s;
-  --long-duration: 0.7s;
+  --header_high: 68px;
   --top-space: 40px;
   --top-space-l: 60px;
   --bottom-space: 40px;
   --bottom-space-l: 60px;
-  --light-p: #444;
-  --header_high: 68px;
-
 }
 
 html {
   scroll-behavior: smooth;
   /* Firefox */
-  scrollbar-color: var(--primary-color) var(--primary-color-light);
+  scrollbar-color: var(--primary-color) var(--scroll-bar-bg);
   scrollbar-width: thin;
   font-size: 16px;
 }
@@ -50,14 +50,10 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background-color: var(--primary-color-light);
+  background-color: var(--scroll-bar-bg);
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-}
-
-html::-webkit-scrollbar-thumb:active {
   background-color: var(--primary-color);
 }
 
@@ -128,7 +124,6 @@ body > section {
   }
 }
 
-// Create Loading Circle
 .loading-circle {
   position: fixed;
   width: 100%;
@@ -143,7 +138,7 @@ body > section {
   span {
     width: u.rem(60);
     height: u.rem(60);
-    border: u.rem(8) solid #ccc {
+    border: u.rem(8) solid var(--gray-color) {
       top-color: var(--primary-color);
     }
 

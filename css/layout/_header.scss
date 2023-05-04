@@ -12,10 +12,10 @@
   }
 
   .burger {
-    cursor: pointer;
-    order: 3;
     font-size: u.rem(28);
     transition: var(--short-duration);
+    order: 3;
+    cursor: pointer;
 
     &:hover,
     &.opened {
@@ -133,6 +133,7 @@
       @include u.radius(2.5);
       background-color: var(--red-color);
     }
+
     .search-bar {
       transition: var(--mid-duration);
       max-width: 85%;
