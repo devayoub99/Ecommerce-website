@@ -11,5 +11,5 @@
 
 
 ### BUGS & Issues:
-- [] No MORE products button in NEW seciton.
-- [] reduce JS global variables.
+- [ ] No MORE products button in NEW seciton.
+- [ ] reduce JS global variables.
