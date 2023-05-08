@@ -299,18 +299,16 @@ async function getDataFromPublicApi() {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "215adc18bamshba2581847085043p1a19dcjsn97e11bc84378",
+      "X-RapidAPI-Key": "c88e598a9dmsh1fdfa3ac43ec28cp1338f4jsn05b588ac99cf",
       "X-RapidAPI-Host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
     },
   };
-
   const dataFromAPI = await fetch(
     "https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?country=us&lang=en&currentpage=0&pagesize=30&categories=men_newarrivals_clothes&categories=ladies_newarrivals_clothes&categories=kids_newbornbaby_viewall&sortBy=newProduct",
     options
   )
     .then((response) => response.json())
     .then((data) => {
-      // console.log(data);
       let allProducts = data.results;
       return allProducts.map((product) => {
         // console.log(product.sale);
@@ -409,6 +407,8 @@ async function getDataFromPublicApi() {
     .catch((err) => console.error(err));
 }
 
+getDataFromPublicApi();
+
 /* ========== [12] Search =========== */
 
 let searchIcon = document.getElementById("searchIcon");
@@ -481,39 +481,3 @@ function appearSearchResults(searchBarValue) {
   createResult();
   toggleProduct();
 }
-
-// const options = {
-//   method: "GET",
-//   headers: {
-//     "X-RapidAPI-Key": "215adc18bamshba2581847085043p1a19dcjsn97e11bc84378",
-//     "X-RapidAPI-Host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
-//   },
-// };
-
-// fetch(
-//   "https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?country=us&lang=en&currentpage=0&pagesize=30&categories=ladies_newarrivals_clothes",
-//   options
-// )
-//   .then((response) => response.json())
-//   .then((data) => {
-//     data.results.forEach((product) => console.log(product.categoryName));
-//   })
-//   .catch((err) => console.error(err));
-
-// getDataFromPublicApi();
-
-// const options = {
-//   method: "GET",
-//   headers: {
-//     "X-RapidAPI-Key": "215adc18bamshba2581847085043p1a19dcjsn97e11bc84378",
-//     "X-RapidAPI-Host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
-//   },
-// };
-
-// fetch(
-//   "https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/categories/list?lang=en&country=us",
-//   options
-// )
-//   .then((response) => response.json())
-//   .then((response) => console.log(response))
-//   .catch((err) => console.error(err));
