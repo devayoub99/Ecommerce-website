@@ -45,7 +45,7 @@ async function getDataFromAPI() {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "88f8a6e729mshcb42b60a388d603p135322jsn114c17f6cea1",
+      "X-RapidAPI-Key": rapidApiKey,
       "X-RapidAPI-Host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
     },
   };
@@ -106,7 +106,6 @@ function switchActiveCategory(filterButtons) {
 
       // Add ONLY the filtered slides.
       createProductBox(allProducts);
-
     });
   });
 }
