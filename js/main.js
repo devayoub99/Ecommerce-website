@@ -1,4 +1,4 @@
-/* ========== [1] Page loading  =========== */
+/* ========== Page loading  =========== */
 let pageLoading = document.querySelector(".loading-circle");
 
 window.addEventListener("load", function () {
@@ -7,14 +7,14 @@ window.addEventListener("load", function () {
   }, 200);
 });
 
-/* ========== [2] Open Burger Menu  =========== */
+/* ========== Open Burger Menu  =========== */
 let burgerIcon = document.getElementById("burgerIcon");
 
 burgerIcon.addEventListener("click", function () {
   burgerIcon.classList.toggle("opened");
 });
 
-/* ========== [3] Close burgerIcon =========== */
+/* ========== Close burgerIcon =========== */
 document.body.addEventListener("click", function (e) {
   // console.log(e.target.classList.contains("active"));
   let searchIcon = !e.target.classList.contains("search-icon");
@@ -24,7 +24,7 @@ document.body.addEventListener("click", function (e) {
   }
 });
 
-/* ========== [5] Cart Page icon =========== */
+/* ========== Cart Page icon =========== */
 let cartPageIcon = document.getElementById("cartPageIcon");
 
 cartPageIcon.addEventListener("click", () => openPage("../cart.html"));
@@ -33,7 +33,7 @@ function openPage(Path) {
   window.open(Path, "_self");
 }
 
-/* ========== [7] Get Products state =========== */
+/* ========== Get Products state =========== */
 let allBoxes = document.querySelectorAll(".box");
 let productsArr = [];
 
@@ -65,7 +65,7 @@ function loadFromLocalStorage() {
   }
 }
 
-/* ========== [8] Add \ remove item =========== */
+/* ========== Add \ remove item =========== */
 
 window.addEventListener("load", toggleProduct);
 
@@ -143,7 +143,7 @@ function removeNotificationDot(targetElement) {
   }
 }
 
-/* ========== [9] Add active class to the Current Section =========== */
+/* ========== Add active class to the Current Section =========== */
 const navLinks = document.querySelectorAll(".page-header nav a");
 const sections = document.querySelectorAll(".linked-sec");
 
@@ -172,7 +172,7 @@ window.addEventListener("scroll", function () {
   });
 });
 
-/* ========== [11] Disappear poped-up box when scroll =========== */
+/* ========== Disappear poped-up box when scroll =========== */
 
 window.addEventListener("scroll", () => {
   let allProducts = document.querySelectorAll(".reco .boxes-container .box");
@@ -194,7 +194,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-/* ========== [12] Scroll To Top Button =========== */
+/* ========== Scroll To Top Button =========== */
 
 let scrollToTopBtn = document.querySelector(".scroll-to-top");
 
@@ -250,7 +250,7 @@ function loginToSignup() {
   });
 }
 
-/* ========== [10] Dynamic Pop-up for BOX =========== */
+/* ========== Dynamic Pop-up for BOX =========== */
 function popUpBox() {
   let allProducts = document.querySelectorAll(".reco .boxes-container .box");
 
@@ -293,123 +293,7 @@ function removeAddedElements(targetBox) {
   }
 }
 
-/* ========== [11] Get Data From Public API =========== */
-
-async function getDataFromPublicApi() {
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "c88e598a9dmsh1fdfa3ac43ec28cp1338f4jsn05b588ac99cf",
-      "X-RapidAPI-Host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
-    },
-  };
-  const dataFromAPI = await fetch(
-    "https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?country=us&lang=en&currentpage=0&pagesize=30&categories=men_newarrivals_clothes&categories=ladies_newarrivals_clothes&categories=kids_newbornbaby_viewall&sortBy=newProduct",
-    options
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      let allProducts = data.results;
-      return allProducts.map((product) => {
-        // console.log(product.sale);
-        let productDiv = document.createElement("div");
-        productDiv.classList.add("box", `box-${allProducts.indexOf(product)}`);
-        productDiv.setAttribute("data-cat", product.categoryName);
-
-        // console.log(product.categoryName);
-
-        let imageSection = document.createElement("section");
-        imageSection.className = "image";
-
-        let productImg = document.createElement("img");
-        productImg.src = product.images[0].baseUrl;
-
-        if (product.rgbColors) {
-          let productColors = document.createElement("div");
-          productColors.className = "product-colors";
-          for (let i = 0; i < product.rgbColors.length; i++) {
-            let color = document.createElement("span");
-            color.style.backgroundColor = product.rgbColors[i];
-            color.className = "color";
-            productColors.append(color);
-          }
-          imageSection.append(productColors);
-        }
-
-        let productCats = document.createElement("span");
-        productCats.className = "product-category";
-        productCats.innerHTML = product.categoryName;
-
-        // console.log(product.sellingAttributes)
-
-        imageSection.append(productImg);
-        imageSection.append(productCats);
-
-        let infoSection = document.createElement("section");
-        infoSection.className = "info";
-
-        let nameNSizes = document.createElement("div");
-        nameNSizes.className = "row";
-
-        let productTitle = document.createElement("h3");
-        productTitle.className = "product-name";
-        productTitle.innerHTML = product.name;
-        nameNSizes.append(productTitle);
-
-        if (product.variantSizes.length) {
-          let productSizes = document.createElement("select");
-          productSizes.className = "product-sizes";
-          for (let i = 0; i < product.variantSizes.length; i++) {
-            let size = document.createElement("option");
-            size.value = product.variantSizes[i].filterCode;
-            size.innerHTML = product.variantSizes[i].filterCode;
-            productSizes.append(size);
-          }
-          nameNSizes.append(productSizes);
-        }
-
-        let productPricing = document.createElement("div");
-        productPricing.classList.add("price-add");
-
-        let productPrice = document.createElement("span");
-        productPrice.className = "price";
-        productPrice.innerHTML = product.price.value;
-
-        let addBtn = document.createElement("button");
-        addBtn.classList.add("add-to-cart", "transparent-btn");
-
-        let addIcon = document.createElement("i");
-        addIcon.classList.add("bx", "bx-cart", "cart-icon");
-
-        addBtn.append(addIcon);
-
-        productPricing.append(productPrice);
-        productPricing.append(addBtn);
-
-        infoSection.append(nameNSizes);
-
-        infoSection.append(productPricing);
-
-        productDiv.append(imageSection);
-        productDiv.append(infoSection);
-
-        // if (product.categoryName === "Kids") {
-        //   console.log(product.categoryName);
-        // }
-
-        // document.body.append(productDiv);
-        let target = document.querySelector(".reco .boxes-container");
-
-        target.append(productDiv);
-      });
-    })
-    .then(() => popUpBox())
-    .catch((err) => console.error(err));
-}
-
-getDataFromPublicApi();
-
-/* ========== [12] Search =========== */
+/* ========== Search =========== */
 
 let searchIcon = document.getElementById("searchIcon");
 let searchBar = document.getElementById("searchBar");

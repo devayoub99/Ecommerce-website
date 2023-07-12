@@ -29,6 +29,12 @@
       rel="stylesheet"
     />
 
+    <!-- Swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
     <title>ECO | Home</title>
   </head>
@@ -149,10 +155,7 @@
       </div>
     </section>
 
-    <section
-      class="new gallery-section linked-sec produtcs-container"
-      id="new"
-    >
+    <section class="new gallery-section linked-sec produtcs-container" id="new">
       <div class="container">
         <div class="special-heading">
           <h2>new</h2>
@@ -582,24 +585,14 @@
           <h2>reco</h2>
           <p>Products we recommended</p>
         </div>
-        <h2 class="special-heading"></h2>
-        <div class="filter-btns">
-          <button class="cat-filter btn active">all</button>
-          <button class="cat-filter btn">Kids</button>
-          <button class="cat-filter btn">Men</button>
-          <button class="cat-filter btn">Ladies</button>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <div class="swiper-wrapper" id="swiperWrapper"></div>
         </div>
-        <div class="boxes-container"></div>
       </div>
-      <div class="slider-controls">
-        <button class="previous-container" id="previous">
-          <i class="bx bx-left-arrow arrow"></i>
-        </button>
-        <button class="next-container" id="next">
-          <i class="bx bx-right-arrow arrow"></i>
-        </button>
-        <div class="slider-indicators" id="sliderIndicators"></div>
-      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev swiper-button"></div>
+      <div class="swiper-button-next swiper-button"></div>
     </section>
 
     <section class="features linked-sec" id="features">
@@ -690,6 +683,7 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/galary.js"></script>
-    <script src="./js/imageSlider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script type="module" src="./js/swiper.js"></script>
   </body>
 </html>

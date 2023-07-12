@@ -5,11 +5,11 @@
 
   .filter-btns {
     @include u.d-flex(space-around, center);
-    gap: 1vw;
+    gap: 20px;
+    overflow-x: auto;
 
     @include u.breakpoint(small) {
       justify-content: center;
-      gap: 2vw;
     }
 
     button {
@@ -22,117 +22,28 @@
     }
   }
 
-  .boxes-container {
-    position: relative;
-    overflow: hidden;
-    min-height: 90vh;
+  .swiper {
+    margin-top: u.rem(20);
+  }
 
-    .box {
-      width: u.rem(260);
-      @include u.transform-center(0, 50%);
-
-      $productsCount: 30;
-
-      @for $i from 0 to $productsCount {
-        &.box-#{$i} {
-          left: $i * 280 + 40px;
-        }
-      }
-
-      @include u.breakpoint(small) {
-        width: u.rem(210);
-
-        @for $i from 1 to $productsCount {
-          &.box-#{$i} {
-            left: $i * 250 + 40px;
-          }
-        }
-      }
-
-      @include u.breakpoint(large) {
-        width: u.rem(260);
-
-        @for $i from 0 to $productsCount {
-          &.box-#{$i} {
-            left: $i * 300 + 40px;
-          }
-        }
-      }
-
-      .row {
-        @include u.d-flex(space-between, center);
-      }
-
-      .product-sizes {
-        background-color: var(--primary-color);
-        padding: u.rem(2);
-        color: var(--black-color);
-        outline-color: transparent;
-      }
-
-      &.hidden {
-        left: -100%;
-      }
-    }
-
-    .box.pop-up-box {
-      left: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: var(--box-shadow-1);
-
-      @include u.breakpoint(small) {
-        width: 62%;
-      }
-
-      @include u.breakpoint(medium) {
-        width: 46%;
-      }
-
-      @include u.breakpoint(large) {
-        width: 36%;
-      }
-
-      @include u.breakpoint(xlarge) {
-        width: 30%;
-      }
-
-      .image {
-        border-radius: unset;
-      }
-
-      .product-name {
-        white-space: normal;
-      }
+  .swiper-button {
+    display: none;
+    color: var(--primary-color);
+    @include u.breakpoint(medium) {
+      display: block;
     }
   }
 
-  .slider-controls {
-    button {
-      background-color: var(--gray-color);
+  .swiper-pagination span {
+    background-color: var(--primary-color);
+  }
+
+  .box {
+    .product-sizes {
+      background-color: var(--primary-color);
+      padding: u.rem(2);
       color: var(--black-color);
-      border: none;
-      @include u.radius(8);
-      @include u.transform-center(0, 50%);
-      @include u.d-flex(center, center);
-      padding: u.rem(6);
-      cursor: pointer;
-      font-size: u.rem(24);
-      transition: var(--short-duration);
-
-      &:hover {
-        background-color: var(--light-gray-color);
-      }
-    }
-
-    .previous-container {
-      left: u.rem(15);
-    }
-    .next-container {
-      right: u.rem(15);
-    }
-
-    .disabled {
-      pointer-events: none;
+      outline-color: transparent;
     }
   }
 }
