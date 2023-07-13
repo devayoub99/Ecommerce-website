@@ -338,8 +338,8 @@
   color: var(--black-color);
   text-align: center;
   text-transform: capitalize;
-  font-size: clamp(u.rem(16), 2.8vw, u.rem(20));
   border: none;
+  @extend .txt-2;
   @include u.radius(8);
   line-height: 1.5;
   cursor: pointer;
