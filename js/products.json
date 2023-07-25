@@ -2,115 +2,131 @@
   "products": [
     {
       "id": 1,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "130",
-      "url": "./images/product-1.png",
-      "category": "Dresses"
+      "title": "Soft Knit Sweater",
+      "price": "34.99",
+      "url": "../images/products/product-01.webp",
+      "category": "men-clothes",
+      "rate": "4.0"
     },
     {
       "id": 2,
-      "title": "Armani Frok Ladies -  Imported Fork Blue",
-      "price": "210",
-      "url": "./images/product-2.png",
-      "category": "Dresses"
+      "title": "Smart Casual Button-Up Shirt - 02",
+      "price": "59.99",
+      "url": "../images/products/product-02.webp",
+      "category": "men-clothes",
+      "rate": "4.3"
     },
     {
       "id": 3,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "90",
-      "url": "./images/product-3.png",
-      "category": "Jewellery"
+      "title": "Soft Knit Pullover",
+      "price": "39.99",
+      "url": "../images/products/product-03.webp",
+      "category": "men-clothes",
+      "rate": "3.8"
     },
     {
       "id": 4,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "100",
-      "url": "./images/product-4.png",
-      "category": "Jewellery"
+      "title": "Minimalist Crew Neck Tee - 04",
+      "price": "29.99",
+      "url": "../images/products/product-04.webp",
+      "category": "men-clothes",
+      "rate": "4.7"
     },
     {
       "id": 5,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "100",
-      "url": "./images/product-5.png",
-      "category": "Dresses"
+      "title": "Trendy High Heels - 209",
+      "price": "139.99",
+      "url": "../images/products/product-05.webp",
+      "category": "women-shoes",
+      "rate": "3.9"
     },
     {
       "id": 6,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "50",
-      "url": "./images/product-6.png",
-      "category": "Accessories"
+      "title": "Athletic Running Shoes",
+      "price": "59.99",
+      "url": "../images/products/product-06.webp",
+      "category": "women-shoes",
+      "rate": "4.6"
     },
     {
       "id": 7,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "50",
-      "url": "./images/product-7.png",
-      "category": "Footwear"
+      "title": "Minimalist Crew Neck Tee - 03",
+      "price": "35.99",
+      "url": "../images/products/product-07.webp",
+      "category": "men-clothes",
+      "rate": "4.6"
     },
     {
       "id": 8,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "300",
-      "url": "./images/product-8.png",
-      "category": "Footwear"
+      "title": "Trendy Graphic T-Shirt - 28",
+      "price": "19.99",
+      "url": "../images/products/product-08.webp",
+      "category": "men-clothes",
+      "rate": "4.2"
     },
     {
       "id": 9,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "300",
-      "url": "./images/product-9.png",
-      "category": "Footwear"
+      "title": "Sporty Sneakers - 102",
+      "price": "99.99",
+      "url": "../images/products/product-09.webp",
+      "category": "men-shoes",
+      "rate": "4.3"
     },
     {
       "id": 10,
-      "title": "ROG Headphone - Model 25",
-      "price": "300",
-      "url": "./images/product-10.png",
-      "category": "Accessories"
+      "title": "Sporty Sneakers - 101",
+      "price": "99.99",
+      "url": "../images/products/product-10.webp",
+      "category": "men-shoes",
+      "rate": "4.0"
     },
     {
       "id": 11,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "700",
-      "url": "./images/product-11.png",
-      "category": "Accessories"
+      "title": "Trendy High Heels - 211",
+      "price": "89.99",
+      "url": "../images/products/product-11.webp",
+      "category": "women-shoes",
+      "rate": "3.7"
     },
     {
       "id": 12,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "500",
-      "url": "./images/product-12.png",
-      "category": "Accessories"
+      "title": "Smart Casual Button-Up Shirt - 01",
+      "price": "59.99",
+      "url": "../images/products/product-12.webp",
+      "category": "men-clothes",
+      "rate": "4.2"
     },
     {
       "id": 13,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "900",
-      "url": "./images/product-13.png",
-      "category": "Accessories"
+      "title": "Trendy Graphic T-Shirt - 29",
+      "price": "19.99",
+      "url": "../images/products/product-13.webp",
+      "category": "men-clothes",
+      "rate": "4.2"
     },
     {
       "id": 14,
-      "title": "ROG Headphone - Model 25",
-      "price": "100",
-      "url": "./images/product-14.png",
-      "category": "Accessories"
+      "title": "Formal Dress Shoes",
+      "price": "99.99",
+      "url": "../images/products/product-14.webp",
+      "category": "men-shoes",
+      "rate": "4.4"
     },
     {
       "id": 15,
-      "title": "ROG Headphone - Model 25",
-      "price": "250",
-      "url": "./images/product-15.png",
-      "category": "Accessories"
+      "title": "Sporty Sneakers - 103",
+      "price": "89.99",
+      "url": "../images/products/product-15.webp",
+      "category": "women-shoes",
+      "rate": "3.8"
     },
     {
       "id": 16,
-      "title": "ROG Headphone - Model 25",
-      "price": "350",
-      "url": "./images/product-16.png",
-      "category": "Accessories"
+      "title": "Cozy Winter Boots",
+      "price": "49.99",
+      "url": "../images/products/product-16.webp",
+      "category": "women-shoes",
+      "rate": "4.2"
     }
   ]
 }

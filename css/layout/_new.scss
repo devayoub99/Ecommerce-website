@@ -6,8 +6,18 @@
   .products {
     @include u.d-grid(4, 30, 30);
 
-    .box:hover {
-      transform: scale(1.05);
+    .box {
+      max-width: 250px;
+      margin: 0 auto;
+
+      @include u.breakpoint(small) {
+        max-width: unset;
+        margin: unset;
+      }
+
+      &:hover {
+        transform: scale(1.04);
+      }
     }
   }
 }

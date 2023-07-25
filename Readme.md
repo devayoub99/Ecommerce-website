@@ -2,30 +2,31 @@
 
 ### Features in the next versions:
 
-1. Two UI modes (Dark, Light)
-2. Arabic Language.
-3. Multiple currencies for products price.\
-4. Use _data-id_ to reference to product instead of it's name.
-5. Add the search results to a slider instead of gallery to increase UX.
-6. Add search results count.
+- [ ] Two UI modes (Dark, Light)
+- [ ] Arabic Language.
+- [ ] Multiple currencies for products price.\
+- [x] Use _data-id_ to reference to product instead of it's name.
+- [ ] Add the search results to a slider instead of gallery to increase UX.
+- [ ] Add search results count.
+- [x] Create the Gallery section using JavaScript and products.json file instead of Static data in HTML files.
 
 #### Cart Page
 
-1. When click on a product in **Cart page**, Go to the product and pop it up.
+- [ ] When click on a product in **Cart page**, Go to the product and pop it up.
 
 #### Discount page
 
-1. Change Product names, prices, ratings, and _data-cat_ value.
-2. Calculate discount percentage instead of write it **static** in _.discounted::before_.
+- [ ] Calculate discount percentage instead of write it **static** in _.discounted::before_.
 
 ### BUGS & Issues:
 
-- [ ] Change Product names, prices, ratings, and _data-cat_ value.
+- [x] Change Product names, prices, ratings, and _data-cat_ value.
 - [x] Solve responsive issue on **mobile** screens (scroll x).
-- [ ] No MORE products button in NEW seciton.
+- [x] No MORE products button in NEW seciton.
 - [ ] Reduce JS global variables.
+- [ ] Re-make **main.js** file with cleaner code.
 - [ ] Reduce classes for main sections in the page (especially in **home page**).
-- [ ] Add more comments to JS files to clearify some ideas & Delete some of them.
+- [x] Add more comments to JS files to clearify some ideas & Delete some of them.
 - [ ] Include **hidden** class in my custom framework.
 - [ ] Change bg color for **special-btn** in _new_ section when **hover**.
 - [ ] Change bg color for **scroll-to-top** button when **hover**.
@@ -47,7 +48,7 @@
 
   #### Recommended Section
 
-  - [ ] Get filters from API. Show them in **select** element as **options**.
+  - [x] Get filters from API.
 
   #### Footer Section
 
