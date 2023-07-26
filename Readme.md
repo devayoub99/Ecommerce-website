@@ -6,8 +6,7 @@
 - [ ] Arabic Language.
 - [ ] Multiple currencies for products price.\
 - [x] Use _data-id_ to reference to product instead of it's name.
-- [ ] Add the search results to a slider instead of gallery to increase UX.
-- [ ] Add search results count.
+- [x] Add search results count.
 - [x] Create the Gallery section using JavaScript and products.json file instead of Static data in HTML files.
 
 #### Cart Page
@@ -23,8 +22,8 @@
 - [x] Change Product names, prices, ratings, and _data-cat_ value.
 - [x] Solve responsive issue on **mobile** screens (scroll x).
 - [x] No MORE products button in NEW seciton.
-- [ ] Reduce JS global variables.
-- [ ] Re-make **main.js** file with cleaner code.
+- [x] Reduce JS global variables.
+- [x] Re-make **main.js** file with cleaner code.
 - [ ] Reduce classes for main sections in the page (especially in **home page**).
 - [x] Add more comments to JS files to clearify some ideas & Delete some of them.
 - [ ] Include **hidden** class in my custom framework.
@@ -38,7 +37,7 @@
 
   - [ ] Change logo image width to **65px** ➡ **75px**.
   - [ ] Increase icon height to filled **header** height.
-  - [ ] Hide Search bar after show it.
+  - [x] Hide Search bar after show it.
   - [ ] Solve searchbar in the beginning of **large** screens.
 
   #### Landing Section
