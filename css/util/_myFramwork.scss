@@ -2,11 +2,12 @@
 
 // * [1] Login & Signup Popup
 
-.results-container {
-  @include u.d-grid(3, 30, 30);
-  align-items: center;
+.search-results {
   min-height: 100vh;
-  margin: u.rem(30) 0;
+  .results-container {
+    @include u.d-grid(3, 30, 30);
+    margin: u.rem(30) 0;
+  }
 }
 
 .be-a-member {
