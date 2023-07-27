@@ -6,8 +6,10 @@
 - [ ] Arabic Language.
 - [ ] Multiple currencies for products price.\
 - [x] Use _data-id_ to reference to product instead of it's name.
+- [ ] Add the search results to a slider instead of gallery to increase UX.
 - [x] Add search results count.
 - [x] Create the Gallery section using JavaScript and products.json file instead of Static data in HTML files.
+- [ ] Follow BEM.
 
 #### Cart Page
 
