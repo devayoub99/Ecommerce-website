@@ -15,6 +15,8 @@ function getFromLocalstorage() {
   const hasLocalStorageData =
     JSON.parse(window.localStorage.getItem("products")) ?? [];
 
+  const cartPageIcon = document.querySelector(".page-header .cart-icon");
+
   getItemsStatus();
   addNotificationToCart();
 
@@ -172,6 +174,7 @@ function showProductsBasedOnScreenSize() {
 
 function addToCartOrRemove() {
   let allBoxes = document.querySelectorAll(".box");
+  const cartPageIcon = document.querySelector(".page-header .cart-icon");
 
   allBoxes.forEach((box) => {
     let addIcon = box.querySelector(".cart-icon");

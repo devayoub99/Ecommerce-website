@@ -14,6 +14,7 @@
 #### Cart Page
 
 - [ ] When click on a product in **Cart page**, Go to the product and pop it up.
+- [ ] Complete calculation.
 
 #### Discount page
 
@@ -34,6 +35,8 @@
 - [ ] Move **loading-circle** class from _boilerplate.scss_ to _myFramework.scss_ file
 - [ ] Split _myFramework.scss_ file to multiple files.
 - [ ] Change **body > section** rule to **.new, .features,...**.
+- [ ] Fix the cart page link in **cart page** and **discount page**.
+- [ ] Add a placeholder for the search input in **cart page** to tell the user you're going to search in your cart.
 
   #### Header Section
 

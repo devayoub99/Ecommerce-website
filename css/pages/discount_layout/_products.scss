@@ -4,8 +4,12 @@
   margin-bottom: u.rem(20);
   position: relative;
 
-  .discounted {
+  .box {
     position: relative;
+
+    &:hover {
+      transform: scale(1.04);
+    }
 
     &::before {
       content: "65%";
