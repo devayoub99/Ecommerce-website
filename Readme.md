@@ -27,9 +27,7 @@
 - [x] No MORE products button in NEW seciton.
 - [x] Reduce JS global variables.
 - [x] Re-make **main.js** file with cleaner code.
-- [ ] Reduce classes for main sections in the page (especially in **home page**).
 - [x] Add more comments to JS files to clearify some ideas & Delete some of them.
-- [ ] Include **hidden** class in my custom framework.
 - [ ] Change bg color for **special-btn** in _new_ section when **hover**.
 - [ ] Change bg color for **scroll-to-top** button when **hover**.
 - [ ] Move **loading-circle** class from _boilerplate.scss_ to _myFramework.scss_ file
